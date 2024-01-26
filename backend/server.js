@@ -1,14 +1,9 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const app = express();
+const app = require("./app");
+const dotenv = require("dotenv");
+const connectDatabase = require("./config/database");
 
-// Connect to MongoDB
-// mongoose.connect('mongodb://localhost:27017/your_database_name', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-
-// Define routes and middleware here
+// database connection file is in 'utils'
+// connectDatabase();
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
