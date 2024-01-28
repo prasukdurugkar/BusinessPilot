@@ -3,11 +3,10 @@ const dotenv = require("dotenv");
 const connectDatabase = require("./config/database");
 
 // Config
-dotenv.config({path:"./config/config.env"})
-
+dotenv.config({ path: "./config/config.env" });
 
 // database connection file is in 'utils'
-// connectDatabase();
+connectDatabase();
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
