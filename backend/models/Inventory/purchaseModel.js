@@ -27,8 +27,9 @@ const purchaseSchema = new mongoose.Schema({
     required: true,
   },
   supplier: {
-    required: true,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "Supplier",
+    required: true,
   },
   paymentMethod: {
     type: String,
@@ -36,12 +37,14 @@ const purchaseSchema = new mongoose.Schema({
   },
   invoiceNumber: {
     type: String,
-    unique: true,
+
+    required: true,
   },
   notes: String,
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User", // Reference to the User
+    required: true,
   },
 });
 
