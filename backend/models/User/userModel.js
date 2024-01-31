@@ -3,7 +3,7 @@ const validator = require("validator");
 const userSchema = new mongoose.Schema({
   role: {
     type: String,
-    enum: ["client", "employee", "admin"],
+    enum: ["client", "employee", "admin", "owner"],
     default: "client",
   },
   name: {
