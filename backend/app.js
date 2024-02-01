@@ -17,6 +17,12 @@ app.use("/api/v1", PurchaseRoutes);
 app.use("/api/v1", SalesRoutes);
 app.use("/api/v1", SupplierRoutes);
 
+const userRoutes = require("./routes/User/userRoute");
+
+app.use("/api/v1", userRoutes);
+
+
+
 // importing error handler
 app.use(errorMiddleware);
 module.exports = app;
