@@ -32,3 +32,10 @@ Before you begin, ensure you have the following installed:
    git clone https://github.com/your-username/business-management-web-app.git
    cd business-management-web-app
    ```
+
+Autherization levels
+
+1. client- home page (HOME page of BusinessPilot)
+2. employee- Inventory + Sales
+3. admin - Inventory + Sales + supplier
+4. owner - Inventory + Sales + supplier + Employee Manegment + Finance Manegment + dashboard
