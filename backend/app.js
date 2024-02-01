@@ -13,6 +13,12 @@ const PurchaseRoutes = require("./routes/purchaseRoute");
 app.use("/api/v1", ProductRoutes);
 app.use("/api/v1", PurchaseRoutes);
 
+const userRoutes = require("./routes/User/userRoute");
+
+app.use("/api/v1", userRoutes);
+
+
+
 // importing error handler
 app.use(errorMiddleware);
 module.exports = app;
