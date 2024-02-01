@@ -34,6 +34,7 @@ const purchaseSchema = new mongoose.Schema({
   paymentMethod: {
     type: String,
     enum: ["cash", "card", "onlinePayment", "bankTransfer"],
+    required: true,
   },
   invoiceNumber: {
     type: String,

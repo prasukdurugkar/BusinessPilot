@@ -54,10 +54,10 @@ const salesSchema = new mongoose.Schema({
   paymentMethod: {
     type: String,
     enum: ["cash", "card", "onlinePayment"],
+    required: true,
   },
   invoiceNumber: {
     type: String,
-    unique: true,
   },
   notes: String,
   createdBy: {
@@ -66,4 +66,4 @@ const salesSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Product", salesSchema);
+module.exports = mongoose.model("Sales", salesSchema);
