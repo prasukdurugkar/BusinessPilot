@@ -1,42 +1,119 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.left-nav {
+  background-color: #21263C;
+  width: 250px;
+  height: 100vh;
+  
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.left-nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  height: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-nav-btn {
+  gap: 5px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* margin-left: -80px; */
+  border-bottom: 1px  solid rgba(176, 173, 173, 0.379);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.left-nav-btn:hover {
+  background-color: #343B50;
 }
 
-.card {
-  padding: 2em;
+.left-nav-btn.active {
+  background-color: #343B50;
 }
 
-.read-the-docs {
-  color: #888;
+.left-nav-btn .iconfont {
+  margin-right: 10px;
+}
+
+.navigation-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #21263C;
+}
+
+.navigation-top .iconfont{
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.refresh-btn {
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 250px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 400px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-left: -600px;
+}
+
+.search-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.search-text input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  font-size: 16px;
+}
+
+.search-text button {
+  width: 50px;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: #21263C;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.dashboard {
+  display: flex;
 }
