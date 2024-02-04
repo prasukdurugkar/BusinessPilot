@@ -3,6 +3,13 @@ const app = express();
 const dotenv = require("dotenv");
 const errorMiddleware = require("./middleware/error");
 app.use(express.json());
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 
 //config env
 dotenv.config({ path: "./config/config.env" });
@@ -20,8 +27,6 @@ app.use("/api/v1", SupplierRoutes);
 const userRoutes = require("./routes/User/userRoute");
 
 app.use("/api/v1", userRoutes);
-
-
 
 // importing error handler
 app.use(errorMiddleware);
