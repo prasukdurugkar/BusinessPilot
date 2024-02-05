@@ -1,30 +1,16 @@
 import React from 'react'
-import { HiHome } from "react-icons/hi2";
-import { MdOutlineInventory } from "react-icons/md";
 
 
-const NavigationButton = () => {
+const   NavigationButton = (props) => {
     return (
-        <div className='left-nav-container'>
+        // < className='left-nav-container'>
 
-            <div className='left-nav-btn'>
-                <HiHome />
-                <p>Home</p>
+            <div className=' flex gap-1 left-nav-btn align-middle justify-center m-4 hover:bg-white px-8s py-2 rounded-md'>
+                
+                <span className='m-1'>{props.icon}</span>
+                <a href='/'>{props.name}</a>
             </div>
-
-            <div className='left-nav-btn'>
-                <MdOutlineInventory />
-                <p>Inventory</p>
-            </div>
-            <div className='left-nav-btn'>
-                <MdOutlineInventory />
-                <p>Inventory</p>
-            </div>
-            <div className='left-nav-btn'>
-                <MdOutlineInventory />
-                <p>Inventory</p>
-            </div>
-        </div>
+        // Bhava icons kasa pathavto props na
     )
 }
 

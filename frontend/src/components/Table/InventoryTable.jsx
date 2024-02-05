@@ -18,7 +18,7 @@ const InventoryTable = () => {
     dispatch(getProduct());
   }, [dispatch]);
   return (
-    <div className="w-full ">
+    <div className="w-full bg-gray-100 m-2 rounded-md ">
       <Table>
         <TableCaption>A list of your recent products.</TableCaption>
         <TableHeader>

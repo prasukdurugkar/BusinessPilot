@@ -1,11 +1,12 @@
 import React from 'react'
+import { Avatar } from "@material-tailwind/react";
 
-const Avatar = () => {
+const AvatarProfile = () => {
   return (
-    <div className='avatar'>
-        <img  src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="" />
-    </div>
+    <Avatar className='w-8 h-8 mt-2' src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png" alt="avatar" />
   )
 }
 
-export default Avatar
+export default AvatarProfile
+
+ 

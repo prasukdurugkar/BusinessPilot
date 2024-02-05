@@ -1,15 +1,19 @@
 import React from 'react'
 import RefreshButton from './Buttons/RefreshButton';
-import Avatar from './Avatar';
+import AvatarProfile from './Avatar';
 import Search from './Search';
+import NewItemButton from './Buttons/NewItemButton';
+
 
 const NavigationTop = () => {
     return (
-        <div className='navigation-top'>
-            <RefreshButton />
+        <nav className=' h-12 flex justify-between px-10 bg-gray-100 align-middle m-1 rounded-md'>
+            {/* <LogoButton/> */}
+            <AvatarProfile />
             <Search />
-            <Avatar />
-        </div>
+            <NewItemButton/>
+            <AvatarProfile />
+        </nav>
     )
 }
 
