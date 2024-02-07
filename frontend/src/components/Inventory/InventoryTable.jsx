@@ -7,9 +7,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { getProduct } from "../../actions/inventory/productAction";
 import { useDispatch, useSelector } from "react-redux";
+import Loading from "../Layouts/Loading";
 
 const InventoryTable = () => {
   const { loading, products } = useSelector((state) => state.products);
@@ -19,23 +20,19 @@ const InventoryTable = () => {
   }, [dispatch]);
   return (
     <div className="w-full bg-gray-100 m-2 rounded-md ">
-      <Table>
-        <TableCaption>A list of your recent products.</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[100px]">Id</TableHead>
-            <TableHead>Name</TableHead>
-            <TableHead>Category</TableHead>
-            <TableHead className="">Description</TableHead>
-            <TableHead className="">Price</TableHead>
-            <TableHead className="">stock</TableHead>
-          </TableRow>
-        </TableHeader>
-
-        {loading ? (
-          "" // should add loading component
-        ) : (
-          // mapping all products
+      <Suspense fallback={<Loading />}>
+        <Table>
+          <TableCaption>A list of your recent products.</TableCaption>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="w-[100px]">Id</TableHead>
+              <TableHead>Name</TableHead>
+              <TableHead>Category</TableHead>
+              <TableHead className="">Description</TableHead>
+              <TableHead className="">Price</TableHead>
+              <TableHead className="">stock</TableHead>
+            </TableRow>
+          </TableHeader>
 
           <TableBody>
             {products.product &&
@@ -50,8 +47,8 @@ const InventoryTable = () => {
                 </TableRow>
               ))}
           </TableBody>
-        )}
-      </Table>
+        </Table>
+      </Suspense>
     </div>
   );
 };
